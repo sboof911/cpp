@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/10 18:54:35 by amaach            #+#    #+#             */
-/*   Updated: 2022/02/12 19:44:24 by amaach           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -18,10 +6,10 @@ std::string    replace_string(std::size_t beggin, std::size_t found, std::size_t
 {
     std::string     help;
 
-    help = line.substr(beggin, found);
+    help = line.substr(beggin, found - beggin);
     help += replace;
-    help += line.substr(found + replace.size() - s1_size, line.size());
-    return (help);
+    //help += line.substr(found + replace.size() - s1_size, line.size());
+    //return (help);
     return (help);
 }
 
@@ -56,12 +44,15 @@ int     main(int argc, char **argv)
                 std::size_t beggin = 0;
                 while (found != std::string::npos)
                 {
+                    //std::cout << "beggin = " << beggin << "and found = " << found << std::endl;
                     replacement += replace_string(beggin, found, s1.size(), line, s2);
-                    std::cout << replacement << std::endl;
                     beggin = found;
                     found = line.find(argv[2], found + 1);
-                    beggin = found - beggin - s1.size() + s2.size(); // find the math behind that
+                    beggin = beggin - s1.size() + s2.size() - 1; // find the math behind that
                 }
+                replacement += line.substr(beggin, line.size() - beggin);
+                file_help << replacement << std::endl;
+                replacement = "";
             }
         }
         else
