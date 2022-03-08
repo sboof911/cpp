@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 15:33:34 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/06 20:39:32 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/08 21:17:18 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 ClapTrap::ClapTrap( void )
 {
     std::cout << "Claptrap Default constractor called" << std::endl;
+    this->_Hit_point = 10;
+    this->_Energy_points = 10;
+    this->_Attack_damage = 0;
 }
 
 ClapTrap::ClapTrap( std::string name)
