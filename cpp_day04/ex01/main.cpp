@@ -5,23 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/10 14:48:36 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/10 14:49:44 by amaach           ###   ########.fr       */
+/*   Created: 2022/03/08 16:39:50 by amaach            #+#    #+#             */
+/*   Updated: 2022/03/10 18:29:53 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Animal.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
 
-int main( void )
+int main()
 {
-    Fixed a;
-    Fixed b( a );
-    Fixed c;
+    // Brain*  brain;
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
 
-    c = b;
-    std::cout << a.getRawBits() << std::endl;
-    std::cout << b.getRawBits() << std::endl;
-    std::cout << c.getRawBits() << std::endl;
+    // j->;
+    delete j;//should not create a leak
+    delete i; 
 
-    return 0;
+    return (0);
 }

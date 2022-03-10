@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 15:27:13 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/06 16:21:32 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/10 18:11:35 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ class   ClapTrap
     public :
     
         ClapTrap( void );                           // cannonic
-        ClapTrap(std::string name);                 // cannonic
-        ClapTrap(ClapTrap const & src);
+        ClapTrap(std::string name);                
+        ClapTrap(ClapTrap const & src);             // cannonic
         ~ClapTrap( void );                          // cannonic
 
         ClapTrap&  operator=(ClapTrap const & src ); // cannonic

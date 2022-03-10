@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: amaach <amaach@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/03/10 14:47:18 by amaach            #+#    #+#              #
-#    Updated: 2022/03/10 14:49:58 by amaach           ###   ########.fr        #
+#    Created: 2022/03/10 14:44:51 by amaach            #+#    #+#              #
+#    Updated: 2022/03/10 18:23:06 by amaach           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = Fixed.cpp main.cpp
+SRC = Animal.cpp Cat.cpp Dog.cpp main.cpp Brain.cpp
 
 FLAGS = -Wall -Wextra -Werror
 
-NAME = Fixed
+NAME = Animal
 #OBJS = $(SRC:%.c=%.o)
 
 all : $(NAME)

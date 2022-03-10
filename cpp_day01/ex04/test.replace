@@ -1,8 +1,8 @@
-Concevez un 1 prenant trois paramètres dans l’ordre suivant : un nom de
+Concevez 111 programme prenant trois paramètres dans l’ordre suivant : 111 nom de
 fichier et deux strings, s1 et s2.
-Le fichier <filename> sera ouvert et son contenu copié dans un nouveau fichier
+Le fichier <filename> sera ouvert et son contenu copié dans 111 nouveau fichier
 <filename>.replace, où chaque occurrence de s1 sera remplacée par s2.
 Avoir recours aux fonctions C de manipulation de fichiers est interdit et sera considéré
 comme de la triche. Toutes les fonctions membres de la classe std::string sont autorisées sauf replace. Utilisez-les intelligemment !
 Bien entendu, vous devez gérer les entrées inattendues et les erreurs possibles. Créez
-et rendez vos propres tests afin de prouver que votre 1 fonctionne.
+et rendez vos propres tests afin de prouver que votre programme fonctionne.

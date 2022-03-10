@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/10 14:48:36 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/10 14:49:44 by amaach           ###   ########.fr       */
+/*   Created: 2021/12/16 19:13:58 by amaach            #+#    #+#             */
+/*   Updated: 2022/02/18 14:37:11 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef _PhoneBook
+#define _PhoneBook
 
-int main( void )
-{
-    Fixed a;
-    Fixed b( a );
-    Fixed c;
+#include <string>
+#include <iostream>
+#include <iomanip>
+#include "Contact.hpp"
 
-    c = b;
-    std::cout << a.getRawBits() << std::endl;
-    std::cout << b.getRawBits() << std::endl;
-    std::cout << c.getRawBits() << std::endl;
+class PhoneBook {
+    
+    public:
+        PhoneBook();
+        ~PhoneBook( void);
 
-    return 0;
-}
+        void	ADD_contact( int i );
+        void    SEARCH_contact( int i );
+        void    search_index(int index, int i);
+
+    private:
+		Contact	Contact[8];
+};
+
+#endif
