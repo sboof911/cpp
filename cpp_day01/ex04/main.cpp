@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 18:54:35 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/09 13:30:09 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/10 14:38:21 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 #include <fstream>
 
-std::string    replace_string(std::size_t beggin, std::size_t found, std::size_t s1_size, std::string line, std::string replace)
+std::string    replace_string(std::size_t beggin, std::size_t found, std::string line, std::string replace)
 {
     std::string     help;
 
@@ -49,14 +49,14 @@ int     main(int argc, char **argv)
 
             while (std::getline(file, line))
             {
-                found = line.find(argv[2]);
+                found = line.find(s1);
                 std::size_t beggin = 0;
                 while (found != std::string::npos)
                 {
-                    replacement += replace_string(beggin, found, s1.size(), line, s2);
+                    replacement += replace_string(beggin, found, line, s2);
                     beggin = found;
-                    found = line.find(argv[2], found + 1);
-                    beggin = beggin - s1.size() + s2.size(); // find the math behind that
+                    found = line.find(s1, found + 1);
+                    beggin = beggin + s1.size();
                 }
                 replacement += line.substr(beggin, line.size() - beggin);
                 file_help << replacement << std::endl;
