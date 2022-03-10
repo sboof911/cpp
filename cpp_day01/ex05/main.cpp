@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 14:26:41 by amaach            #+#    #+#             */
-/*   Updated: 2022/02/17 13:08:38 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/09 13:32:41 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int     main()
 {
     Karen   help;
 
-    help.complain("WARNING");
+    help.complain("INFO");
 }

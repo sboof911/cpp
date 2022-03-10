@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 11:58:36 by amaach            #+#    #+#             */
-/*   Updated: 2022/02/19 12:32:01 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/09 13:18:19 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,8 @@ private:
 
     std::string _name;
 };
+
+void    randomChump( std::string name );
+Zombie* newZombie( std::string name );
+
 #endif

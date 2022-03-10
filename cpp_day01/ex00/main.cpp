@@ -6,26 +6,26 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 11:58:47 by amaach            #+#    #+#             */
-/*   Updated: 2022/02/19 12:34:21 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/09 13:19:30 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie* newZombie( std::string name )
-{
-    Zombie *help;
+// Zombie* newZombie( std::string name )
+// {
+//     Zombie *help;
     
-    help = new Zombie(name);
-    return (help);
-}
+//     help = new Zombie(name);
+//     return (help);
+// }
 
-void randomChump( std::string name )
-{
-    Zombie   Random(name);
+// void randomChump( std::string name )
+// {
+//     Zombie   Random(name);
 
-    Random.announce();
-}
+//     Random.announce();
+// }
 
 int     main()
 {
@@ -37,6 +37,5 @@ int     main()
     test->announce();
     delete test;
     randomChump("shit");
-    std::cout << "I m shit" << std::endl;
     return 0;
 }

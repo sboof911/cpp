@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:51:08 by amaach            #+#    #+#             */
-/*   Updated: 2022/02/07 17:14:59 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/09 13:20:44 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,7 @@ class   Zombie {
     
         std::string _name;
 };
+
+Zombie* zombieHorde( int N, std::string name );
+
 #endif

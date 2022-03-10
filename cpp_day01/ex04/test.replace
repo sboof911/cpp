@@ -1,4 +1,4 @@
-Concevez un programme prenant trois paramètres dans l’ordre suivant : un nom de
+Concevez un programme prenant trois paramètres dans l’1121�ordre suivant : un nom de
 fichier et deux strings, s1 et s2.
 Le fichier <filename> sera ouvert et son contenu copié dans un nouveau fichier
 <filename>.replace, où chaque occurrence de s1 sera remplacée par s2.

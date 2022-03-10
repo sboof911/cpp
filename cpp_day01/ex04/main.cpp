@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 18:54:35 by amaach            #+#    #+#             */
-/*   Updated: 2022/02/14 12:10:06 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/09 13:30:09 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int     main(int argc, char **argv)
                     replacement += replace_string(beggin, found, s1.size(), line, s2);
                     beggin = found;
                     found = line.find(argv[2], found + 1);
-                    beggin = beggin - s1.size() + s2.size() - 1; // find the math behind that
+                    beggin = beggin - s1.size() + s2.size(); // find the math behind that
                 }
                 replacement += line.substr(beggin, line.size() - beggin);
                 file_help << replacement << std::endl;
