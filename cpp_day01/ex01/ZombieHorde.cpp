@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 13:20:18 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/09 13:20:36 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/14 23:05:54 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Zombie* zombieHorde( int N, std::string name )
     help = new Zombie[N];
     while (i < N)
     {
-        help[i].set_name(name + " " + std::to_string(i + 1));
+        help[i].set_name(name);
         i++;
     }
     return (help);

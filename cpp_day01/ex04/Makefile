@@ -6,11 +6,11 @@
 #    By: amaach <amaach@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/09 13:31:01 by amaach            #+#    #+#              #
-#    Updated: 2022/03/09 13:31:11 by amaach           ###   ########.fr        #
+#    Updated: 2022/03/16 15:37:25 by amaach           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FLAGS =  -Wall -Wextra -Werror -g -fsanitize=address
+FLAGS =  -Wall -Wextra -Werror -std=c++98
 
 
 NAME = Replace
