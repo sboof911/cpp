@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 15:42:24 by amaach            #+#    #+#             */
-/*   Updated: 2022/02/22 11:22:01 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/17 18:27:14 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ Fixed&   Fixed::operator=(Fixed const & src )
 
 int Fixed::getRawBits( void ) const
 {
-    std::cout << "getRawBits member function called" << std::endl;
     return (this->_store_Fpn);
 }
 

@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 15:42:24 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/06 15:21:21 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/17 19:15:56 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,13 @@ Fixed::Fixed( Fixed const & src )
 
 Fixed::Fixed( int const fp)
 {
+    std::cout << "Constractor int called" << std::endl;
     this->_store_Fpn = fp << this->_store_fraction;
 }
 
 Fixed::Fixed( float const fp )
 {
+    std::cout << "Constractor float called" << std::endl;
     this->_store_Fpn = roundf(fp * (1 << _store_fraction));
 }
 
@@ -40,8 +42,6 @@ Fixed::~Fixed( void )
 
 Fixed&   Fixed::operator=(Fixed const & src )
 {
-    std::cout << "Copy assignment operator called" << std::endl;
-
     if (this != &src)
         this->_store_Fpn = src.getRawBits();
 
@@ -66,7 +66,6 @@ int     Fixed::toInt( void ) const
 
 int Fixed::getRawBits( void ) const
 {
-    std::cout << "getRawBits member function called" << std::endl;
     return (this->_store_Fpn);
 }
 
@@ -74,6 +73,7 @@ void Fixed::setRawBits( int const raw )
 {
     this->_store_Fpn = raw;
 }
+
 
 bool Fixed::operator>(Fixed const &_Fixed) const
 {
@@ -105,6 +105,7 @@ bool Fixed::operator!=(Fixed const &_Fixed) const
     return (this->getRawBits() != _Fixed.getRawBits());
 }
 
+
 Fixed &Fixed::operator++(void)
 {
     ++_store_Fpn;
@@ -113,9 +114,10 @@ Fixed &Fixed::operator++(void)
 
 Fixed Fixed::operator++(int)
 {
-    Fixed f(*this);
-    ++_store_Fpn;
-    return f;
+    Fixed help(*this);
+    
+    _store_Fpn++;
+    return help;
 }
 
 Fixed &Fixed::operator--(void)
@@ -126,30 +128,47 @@ Fixed &Fixed::operator--(void)
 
 Fixed Fixed::operator--(int)
 {
-    Fixed f(*this);
-    --_store_Fpn;
-    return f;
+    Fixed help(*this);
+    
+    _store_Fpn--;
+    return help;
 }
 
-Fixed &Fixed::min(Fixed &f1, Fixed &f2)
+
+Fixed	Fixed::operator+( const Fixed &src ) const
 {
-    if (f1.getRawBits() < f2.getRawBits())
-        return f1;
-    else 
-        return f2;
+    Fixed	help;
+
+	help.setRawBits(this->getRawBits() + src.getRawBits());
+	return (help);
 }
+
+Fixed	Fixed::operator-( const Fixed &src ) const
+{
+    Fixed	help;
+
+	help.setRawBits(this->getRawBits() - src.getRawBits());
+	return (help);
+}
+
+Fixed	Fixed::operator*( const Fixed &src ) const
+{
+    Fixed	help(this->toFloat() * src.toFloat());
+
+	return (help);
+}
+
+Fixed	Fixed::operator/( const Fixed &src ) const
+{
+    Fixed	help(this->toFloat() / src.toFloat());
+
+	return (help);
+}
+
 
 const Fixed &Fixed::min(const Fixed &f1, const Fixed &f2)
 {
     if (f1.getRawBits() < f2.getRawBits())
-        return f1;
-    else 
-        return f2;
-}
-
-Fixed &Fixed::max(Fixed &f1, Fixed &f2)
-{
-    if (f1.getRawBits() > f2.getRawBits())
         return f1;
     else 
         return f2;

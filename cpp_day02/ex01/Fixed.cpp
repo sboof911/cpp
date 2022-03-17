@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 15:42:24 by amaach            #+#    #+#             */
-/*   Updated: 2022/02/23 13:52:09 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/16 16:50:34 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ int     Fixed::toInt( void ) const
 
 int Fixed::getRawBits( void ) const
 {
-    std::cout << "getRawBits member function called" << std::endl;
     return (this->_store_Fpn);
 }
 
