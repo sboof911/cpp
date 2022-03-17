@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   WrongCat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/05 11:58:40 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/16 15:49:09 by amaach           ###   ########.fr       */
+/*   Created: 2022/03/08 17:11:24 by amaach            #+#    #+#             */
+/*   Updated: 2022/03/08 21:31:17 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef _WRONGCAT_
+#define _WRONGCAT_
 
-void randomChump( std::string name )
+#include "WrongAnimal.hpp"
+
+class WrongCat : public WrongAnimal
 {
-    Zombie   Random(name);
+    private :
+    
+    public :
+        WrongCat( void );
+        WrongCat( WrongCat const & src);
+        ~WrongCat( void );
 
-    Random.announce();
-}
+        WrongCat    operator=(WrongCat const & src);
+        void    makeSound( void ) const;
+};
+
+#endif

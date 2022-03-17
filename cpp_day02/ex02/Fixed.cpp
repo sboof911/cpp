@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 15:42:24 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/17 19:15:56 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/17 23:36:16 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,30 @@
 
 Fixed::Fixed( void ) : _store_Fpn (0)
 {
-    std::cout << "Default constructor called" << std::endl;
+    // std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed( Fixed const & src )
 {
-    std::cout << "Copy constructor called" << std::endl;
+    // std::cout << "Copy constructor called" << std::endl;
     *this = src;
 }
 
 Fixed::Fixed( int const fp)
 {
-    std::cout << "Constractor int called" << std::endl;
+    // std::cout << "Constractor int called" << std::endl;
     this->_store_Fpn = fp << this->_store_fraction;
 }
 
 Fixed::Fixed( float const fp )
 {
-    std::cout << "Constractor float called" << std::endl;
+    // std::cout << "Constractor float called" << std::endl;
     this->_store_Fpn = roundf(fp * (1 << _store_fraction));
 }
 
 Fixed::~Fixed( void )
 {
-    std::cout << "Destructor called" << std::endl;
+    // std::cout << "Destructor called" << std::endl;
 }
 
 Fixed&   Fixed::operator=(Fixed const & src )

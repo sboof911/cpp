@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 16:54:11 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/14 23:04:40 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/16 15:54:06 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,12 @@ Zombie::Zombie( void )
 
 Zombie::~Zombie(void)
 {
-    std::cout << "destractor was called" << std::endl;
+    std::cout << "destractor " << this->_name << " was called" << std::endl;
 }
 
 void    Zombie::set_name(std::string name)
 {
     this->_name = name;
-    // std::cout << "I m in" << std::endl;
 }
 
 std::string Zombie::get_name(void)

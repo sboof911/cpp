@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 21:39:05 by amaach            #+#    #+#             */
-/*   Updated: 2022/02/10 15:30:11 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/16 16:10:36 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,6 @@ HumanA::HumanA(std::string name, Weapon& Weapon_use) : _weaponA(Weapon_use)
     this->_humanAname = name;
     this->_weaponA = Weapon_use.getType();
 }
-
-// HumanA::HumanA(std::string name, Weapon Weapon_use)
-// {
-    // std::cout << "HumanA Constractor Called" << std::endl;
-    // this->_humanAname = name;
-    // this->_weapon = Weapon_use;
-// }
 
 HumanA::~HumanA()
 {

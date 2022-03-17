@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 21:36:36 by amaach            #+#    #+#             */
-/*   Updated: 2022/02/10 17:18:48 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/16 15:59:51 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class HumanB
         
         std::string _humanBname;
         Weapon*      _weaponB;
-
 
     public:
         HumanB(std::string name);

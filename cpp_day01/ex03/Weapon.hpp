@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 21:36:36 by amaach            #+#    #+#             */
-/*   Updated: 2022/02/10 15:27:51 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/16 15:56:38 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Weapon
         Weapon(std::string weapon_use);
         ~Weapon();
         
-        std::string getType( void );
+        std::string getType( void ) const;
         void        setType( std::string the_weapon);
 };
 

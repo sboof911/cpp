@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 16:29:56 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/10 18:29:19 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/16 18:52:27 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ class Animal
         Animal(Animal const & src);
         virtual ~Animal( void );
 
-        Animal          operator=(Animal const & src);
+        // virtual Animal  operator=(Animal const & src);
         std::string     getType( void ) const;
-        virtual void    makeSound( void ) const;
+        virtual void    makeSound( void ) const = 0;
         virtual Brain*  getBrain( void ) const = 0;
 };
 

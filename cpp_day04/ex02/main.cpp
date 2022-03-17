@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 16:39:50 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/16 18:53:26 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/16 18:54:37 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,16 @@
 
 int main()
 {
-//     const Animal* j = new Dog();
-//     const Animal* i = new Cat();
-// // 
-//     // // j->;
-//     delete j;//should not create a leak
-//     delete i; 
-//     // system("leaks Animal");
-//     return (0);
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
+
+    delete j;//should not create a leak
+    delete i; 
+    system("leaks Animal");
+
+
+
+
 
     // const Animal* dd = new Dog();
     // const Animal* ss = new Cat();
@@ -52,35 +54,40 @@ int main()
     // }
     
     // ss->makeSound();
-    // dd->makeSound();
+    // dd->makeSound();   
     // delete dd;//should not create a leak
     // delete ss;
-   	Animal	*animals[NUMBER_OF_ANIMALS];
-	Brain	*brain;
 
-	for (int i = 0; i < NUMBER_OF_ANIMALS; i++)
-	{
-		if (i < NUMBER_OF_ANIMALS / 2)
-			animals[i] = new Dog();
-		else
-			animals[i] = new Cat();
-		std::cout << animals[i]->getType() << std::endl;
-	}
 
-	brain = animals[7]->getBrain();
-    brain->ideas[0] = "0";
-	brain->ideas[1] = "1";
-	brain->ideas[2] = "2";
-	brain->ideas[3] = "3";
-    std::cout << "-------------------------" << std::endl;
-	std::cout << animals[7]->getBrain()->ideas[0] << std::endl;
+
 
     
-	std::cout << animals[7]->getBrain()->ideas[3] << std::endl;
-    Dog sboof;
-    {
-        Dog tmp = sboof;
-    }
+   	// Animal	*animals[NUMBER_OF_ANIMALS];
+	// Brain	*brain;
+
+	// for (int i = 0; i < NUMBER_OF_ANIMALS; i++)
+	// {
+	// 	if (i < NUMBER_OF_ANIMALS / 2)
+	// 		animals[i] = new Dog();
+	// 	else
+	// 		animals[i] = new Cat();
+	// 	std::cout << animals[i]->getType() << std::endl;
+	// }
+
+	// brain = animals[7]->getBrain();
+    // brain->ideas[0] = "0";
+	// brain->ideas[1] = "1";
+	// brain->ideas[2] = "2";
+	// brain->ideas[3] = "3";
+    // std::cout << "-------------------------" << std::endl;
+	// std::cout << animals[7]->getBrain()->ideas[0] << std::endl;
+
+    
+	// std::cout << animals[7]->getBrain()->ideas[3] << std::endl;
+    // Dog sboof;
+    // {
+    //     Dog tmp = sboof;
+    // }
 
 	// for (int i = 0; i < NUMBER_OF_ANIMALS; i++)
 	// 	delete animals[i];

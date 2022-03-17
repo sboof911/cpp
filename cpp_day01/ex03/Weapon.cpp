@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 21:39:05 by amaach            #+#    #+#             */
-/*   Updated: 2022/02/10 15:29:12 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/16 15:56:45 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Weapon::~Weapon()
     std::cout << "Weapon Destractor Called" << std::endl;
 }
 
-std::string    Weapon::getType( void )
+std::string    Weapon::getType( void ) const
 {
     if (this->_weapon.empty())
         return "I don't have a weapon";
