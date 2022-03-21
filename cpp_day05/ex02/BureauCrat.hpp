@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 23:56:10 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/21 15:23:33 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/21 16:30:59 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define _BUREAUCRAT_H
 
 #include <iostream>
+#include "Form.hpp"
+class Form;
 
 class BureauCrat
 {
@@ -29,6 +31,7 @@ class BureauCrat
         // void            setName( std::string name );
         // void            setGrade( int grade);
         void            checkGrade( void );
+        void            signForm( Form & src );
         
         class   GradeTooHighException  : public std::exception
         {

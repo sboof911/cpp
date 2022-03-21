@@ -6,11 +6,11 @@
 #    By: amaach <amaach@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/18 00:51:39 by amaach            #+#    #+#              #
-#    Updated: 2022/03/21 15:32:09 by amaach           ###   ########.fr        #
+#    Updated: 2022/03/21 16:26:07 by amaach           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = BureauCrat.cpp main.cpp
+SRC = BureauCrat.cpp main.cpp Form.cpp
 
 FLAGS = -Wall -Wextra -Werror
 

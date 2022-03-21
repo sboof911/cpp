@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 23:56:12 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/21 15:23:25 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/21 16:22:14 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,12 @@ void            BureauCrat::checkGrade( void )
         throw BureauCrat::GradeTooLowException();
     else if (this->_Grade < 1)
         throw BureauCrat::GradeTooHighException();
+}
+
+void            BureauCrat::signForm( Form & src )
+{
+    if (src.getSign() == true)
+        std::cout << "<" << this->_Name << "> signed <" << src.getName() << ">" << std::endl;
+    else
+        std::cout << "<" << this->_Name << "> couldn't sign <" << src.getName() << "> because <reason>" << std::endl;
 }
