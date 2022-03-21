@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 18:09:47 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/21 21:59:51 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/21 22:12:12 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class   ShrubberyCreationForm : public Form
         void    operator=(ShrubberyCreationForm const & src);
         std::string     getTarget( void ) const;
         void            CreatFile( void );
+        void	        execute( const BureauCrat &executor );
 
     
 };

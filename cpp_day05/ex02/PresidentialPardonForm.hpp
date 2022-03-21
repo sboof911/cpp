@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 18:09:45 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/21 22:04:05 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/21 22:12:25 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class   PresidentialPardonForm : public Form
         ~PresidentialPardonForm( void );
         void    operator=(PresidentialPardonForm const & src);
         std::string     getTarget( void ) const;
+        void	        execute( const BureauCrat &executor );
 
 };
 

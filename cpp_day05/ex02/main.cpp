@@ -6,11 +6,11 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 00:39:43 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/21 21:55:59 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/21 22:10:07 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "BureauCrat.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"

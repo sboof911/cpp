@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 18:18:40 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/21 22:05:32 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/21 22:53:32 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,11 @@ std::ostream&   operator<<(std::ostream &o, PresidentialPardonForm const & src)
 std::string     PresidentialPardonForm::getTarget( void ) const
 {
     return (this->_target);
+}
+
+void	        execute( const BureauCrat &executor )
+{
+    // check Grades Execution
+    // check sign ?
+    // 
 }

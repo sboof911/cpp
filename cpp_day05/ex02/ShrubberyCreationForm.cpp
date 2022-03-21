@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 18:18:35 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/21 22:04:58 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/21 22:54:58 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,12 @@ std::string     ShrubberyCreationForm::getTarget( void ) const
     return (this->_target);
 }
 
-void            ShrubberyCreationForm::CreatFile(  )
+void	        ShrubberyCreationForm::execute( const BureauCrat &executor )
 {
-    if (/*check Conditions*/ 1)
+    // check Grades Execution
+    // check sign ?
+    // 
+        if (/*check Conditions*/ 1)
     {
         std::ofstream   File("<" + this->getTarget() + ">_shrubbery");
 

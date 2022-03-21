@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 18:09:48 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/21 22:02:12 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/21 22:12:22 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class   RobotomyRequestForm : public Form
         ~RobotomyRequestForm( void );
         void    operator=(RobotomyRequestForm const & src);
         std::string     getTarget( void ) const;
-
+        void	        execute( const BureauCrat &executor );
     
 };
 
