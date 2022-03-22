@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 00:39:43 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/22 14:29:41 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/22 13:27:59 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,11 @@ int	main(void)
 		form = new PresidentialPardonForm("28Z");
 		form->execute(bob);
 		delete form;
-		form = NULL;
 	}
 	catch (std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 		delete form;
-		form = NULL;
 	}
 
 	std::cout << "--------------------------------------" << std::endl;
@@ -50,7 +48,6 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;
 		delete form;
-		form = NULL;
 	}
 
 
@@ -67,7 +64,6 @@ int	main(void)
 	{
 		std::cout << e.what() << std::endl;
 		delete form;
-		form = NULL;
 	}
 
 

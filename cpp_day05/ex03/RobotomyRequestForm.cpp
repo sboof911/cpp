@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 18:18:39 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/22 14:26:42 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/22 13:31:02 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,7 @@ void	        RobotomyRequestForm::execute( const BureauCrat &executor ) const
     if (!this->isSigned() || this->getGradeExecute() < executor.getGrade())
         throw Form::CantExecuteForm();
 
-    srand(std::time(0));
-    std::cout << "Une pérceuse fait du bruit" << std::endl;
-    if ((rand() % 2) == 0)
+    if (rand() % 2 == 0)
         std::cout << "<" << this->getTarget() << "> a été robotomisée" << std::endl;
     else
         std::cout << "L'opération du <" << this->getTarget() << "> á échouer" << std::endl;
