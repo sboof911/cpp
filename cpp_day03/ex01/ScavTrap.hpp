@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 19:40:08 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/08 21:07:42 by amaach           ###   ########.fr       */
+/*   Updated: 2022/03/22 18:20:32 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 
     ScavTrap&  operator=(ScavTrap const & src );
     void    attack(const std::string& target );
-    void guardGate( void );
+    void    guardGate( void );
 };
 
 #endif
