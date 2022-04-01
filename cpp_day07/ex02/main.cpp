@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 21:52:28 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/31 22:36:01 by amaach           ###   ########.fr       */
+/*   Updated: 2022/04/01 00:19:56 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "Array.hpp"
 #include "Array.tpp"
 
-#define MAX_VAL 750
+#define MAX_VAL 10
 int main(int, char**)
 {
     Array<int> numbers(MAX_VAL);
@@ -25,11 +25,20 @@ int main(int, char**)
         const int value = rand();
         numbers[i] = value;
         mirror[i] = value;
+        std::cout << "Numbers = " << numbers[i] << std::endl;
+        std::cout << "Mirrors = " << mirror[i] << std::endl;
     }
+    
     //SCOPE
     {
         Array<int> tmp = numbers;
         Array<int> test(tmp);
+
+        for ( int i = 0; i < MAX_VAL; i++)
+        {
+            std::cout << "tmp = " << tmp[i] << std::endl;
+            std::cout << "test = " << test[i] << std::endl;
+        }
     }
 
     for (int i = 0; i < MAX_VAL; i++)
@@ -62,5 +71,30 @@ int main(int, char**)
         numbers[i] = rand();
     }
     delete [] mirror;//
+    system( "leaks Array");
     return 0;
 }
+
+// int     main()
+// {
+//     Array<int> numbers(MAX_VAL);
+//     int* mirror = new int[MAX_VAL];
+//     srand(time(NULL));
+//     for (int i = 0; i < MAX_VAL; i++)
+//     {
+//         const int value = rand();
+//         numbers[i] = value;
+//         mirror[i] = value;
+//         std::cout << "Numbers = " << numbers[i] << std::endl;
+//         std::cout << "Mirrors = " << mirror[i] << std::endl;
+//     }
+//     std::cout << "---------------------------" << std::endl;
+//     Array<int> tmp = numbers;
+//     for (int i = 0; i < MAX_VAL; i++)
+//     {
+//         numbers[i] = rand();
+//         std::cout << "Numbers = " << numbers[i] << std::endl;
+//         std::cout << "tmp     = " << tmp[i] << std::endl;
+//         std::cout << "Mirrors = " << mirror[i] << std::endl;
+//     }
+// }

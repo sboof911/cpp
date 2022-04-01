@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 21:48:09 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/31 22:51:05 by amaach           ###   ########.fr       */
+/*   Updated: 2022/04/01 00:09:14 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class   Array
     public :
         Array<T>( void );
         Array<T>( u_int n);
-        Array<T>( Array<T> & src);
+        Array<T>( Array<T> & src) {*this = src;};
         ~Array<T>( void );
         T*      getArray( void );
         u_int   size( void );

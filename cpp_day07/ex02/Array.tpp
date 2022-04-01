@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 21:56:19 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/31 22:55:01 by amaach           ###   ########.fr       */
+/*   Updated: 2022/04/01 00:12:55 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,16 @@ Array<T>::Array( u_int n) : _n(n)
     this->_Array = new T[n];
 }
 
-template <typename T>
-Array<T>::Array(Array<T> &src)
-{
-    u_int i = src.size();
-    this->_Array = new T[i];
-    *this = src;
-}
+// template <typename T>
+// Array<T>::Array(const Array<T>& src)
+// {
+//     *this = src;
+// }
 
 template <typename T>
 Array<T>::~Array( void )
 {
-    delete this->_Array;
+    delete [] this->_Array;
 }
 
 template <typename T>
@@ -55,11 +53,12 @@ T&      Array<T>::operator=( Array<T> & src )
 {
     if (this != &src)
     {
-        this->_Array = new T[src.size()];
-        this->_Array = src.getArray();
         this->_n = src.size();
+        this->_Array = new T[this->_n];
+        for (u_int i = 0; i < this->_n; i++)
+            this->_Array[i] = src.getArray()[i];
     }
-    return (*this);
+    return (reinterpret_cast<T&>(*this));
 }
 
 template <typename T>
