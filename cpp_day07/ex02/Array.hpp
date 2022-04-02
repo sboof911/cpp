@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 21:48:09 by amaach            #+#    #+#             */
-/*   Updated: 2022/04/01 00:09:14 by amaach           ###   ########.fr       */
+/*   Updated: 2022/04/01 14:02:37 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ class   Array
     public :
         Array<T>( void );
         Array<T>( u_int n);
-        Array<T>( Array<T> & src) {*this = src;};
+        Array<T>( Array<T> & src);
         ~Array<T>( void );
         T*      getArray( void );
         u_int   size( void );
-        T&      operator=( Array<T> & src);
+        Array<T>&      operator=( Array<T> & src);
         T&      operator[]( u_int index );
 
         class   OutOfRang  : public std::exception
@@ -38,5 +38,13 @@ class   Array
         T *     _Array;
         u_int   _n;
 };
+
+template <typename T>
+std::ostream&    operator<<(std::ostream& o, Array<T> & src)
+{
+    for (u_int i = 0; i < src.size(); i++)
+        o << src.getArray()[i] << std::endl;
+    return o;
+}
 
 #endif

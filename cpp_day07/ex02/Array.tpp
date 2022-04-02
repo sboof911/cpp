@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 21:56:19 by amaach            #+#    #+#             */
-/*   Updated: 2022/04/01 00:12:55 by amaach           ###   ########.fr       */
+/*   Updated: 2022/04/01 14:00:36 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,12 @@ Array<T>::Array( u_int n) : _n(n)
     this->_Array = new T[n];
 }
 
-// template <typename T>
-// Array<T>::Array(const Array<T>& src)
-// {
-//     *this = src;
-// }
+template <typename T>
+Array<T>::Array( Array<T>& src )
+{
+    std::cout << "Copy Constroctor Called" << std::endl;
+    *this = src;
+}
 
 template <typename T>
 Array<T>::~Array( void )
@@ -49,8 +50,9 @@ u_int   Array<T>::size( void )
 }
 
 template <typename T>
-T&      Array<T>::operator=( Array<T> & src )
+Array<T>&      Array<T>::operator=( Array<T> & src )
 {
+    std::cout << " Assagnement operator Called" << std::endl;
     if (this != &src)
     {
         this->_n = src.size();
@@ -58,7 +60,7 @@ T&      Array<T>::operator=( Array<T> & src )
         for (u_int i = 0; i < this->_n; i++)
             this->_Array[i] = src.getArray()[i];
     }
-    return (reinterpret_cast<T&>(*this));
+    return (*this);
 }
 
 template <typename T>

@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 21:52:28 by amaach            #+#    #+#             */
-/*   Updated: 2022/04/01 00:19:56 by amaach           ###   ########.fr       */
+/*   Updated: 2022/04/01 14:28:34 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int main(int, char**)
         std::cout << "Mirrors = " << mirror[i] << std::endl;
     }
     
+    std::cout << "------------------------------------" << std::endl;
     //SCOPE
     {
         Array<int> tmp = numbers;
@@ -93,8 +94,12 @@ int main(int, char**)
 //     for (int i = 0; i < MAX_VAL; i++)
 //     {
 //         numbers[i] = rand();
-//         std::cout << "Numbers = " << numbers[i] << std::endl;
-//         std::cout << "tmp     = " << tmp[i] << std::endl;
 //         std::cout << "Mirrors = " << mirror[i] << std::endl;
 //     }
+//     std::cout << "---------------------------" << std::endl;
+//     std::cout << "tmp     = " << tmp << std::endl;
+//     std::cout << "Numbers = " << numbers << std::endl;
+
+//     system( "leaks Array");
+//     return 0;
 // }

@@ -6,7 +6,7 @@
 /*   By: amaach <amaach@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 21:24:43 by amaach            #+#    #+#             */
-/*   Updated: 2022/03/31 21:45:18 by amaach           ###   ########.fr       */
+/*   Updated: 2022/04/01 14:30:02 by amaach           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void print( T const & x ) { std::cout << x << std::endl; return; }
 
 // int main()
 // {
-    // char str[26] = "Sboof rajal mzyan, wlh...";
-// 
-    // iter<char>(str, 25, &print);
+//     char str[26] = "Sboof rajal mzyan, wlh...";
+
+//     iter<char>(str, 25, &print);
 // }
 
 int main()
