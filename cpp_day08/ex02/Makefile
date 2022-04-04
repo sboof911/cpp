@@ -6,7 +6,7 @@
 #    By: amaach <amaach@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 21:28:37 by amaach            #+#    #+#              #
-#    Updated: 2022/04/02 21:28:44 by amaach           ###   ########.fr        #
+#    Updated: 2022/04/04 16:27:50 by amaach           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRC = main.cpp
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Mutan
+NAME = Mutant
 #OBJS = $(SRC:%.c=%.o)
 
 all : $(NAME)
